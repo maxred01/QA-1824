@@ -1,4 +1,4 @@
-"""мой импорт"""
+"""Мой импорт"""
 import requests
 
 URL = "https://hoster.by/ajax/basket.php"
