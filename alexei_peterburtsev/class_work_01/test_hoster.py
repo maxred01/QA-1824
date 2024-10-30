@@ -1,4 +1,4 @@
-# test Hoster
+# test Hoster.by
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
