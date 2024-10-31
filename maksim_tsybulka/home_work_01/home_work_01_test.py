@@ -1,5 +1,5 @@
-"""мой импорт"""
-import requests
+"""Мой импорт"""
+import requests  # pylint: disable=E0401
 
 URL = "https://hoster.by/ajax/basket.php"
 
