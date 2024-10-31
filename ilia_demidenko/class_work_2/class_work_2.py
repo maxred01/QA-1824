@@ -10,3 +10,4 @@ def test_api_users():
     print(response.status_code)
 
     assert response.status_code == 200
+    check.equal(response.status_code, 200)
