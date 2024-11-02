@@ -13,7 +13,6 @@ def test_api_users():
     print(data['page'])
     check.equal(data['page'], 4)
 
-
     print(response.status_code)
 
     # assert response.status_code == 200
