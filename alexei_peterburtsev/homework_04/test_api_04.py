@@ -17,4 +17,4 @@ def test_api_users():
     check.equal(response.status_code, 200, f'status code is NOT 200, status code is,'
                                            f'{response.status_code}')
 
-    check.equal(test_last_name, 'Weaver', f'last_name in not "Weaver"')
+    check.equal(test_last_name, 'Weaver', 'last_name in not "Weaver"')
