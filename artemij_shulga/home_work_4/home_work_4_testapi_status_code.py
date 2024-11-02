@@ -18,3 +18,19 @@ def test_api_users():
 
     check.equal(response.status_code, 200,
                 f'статус код не равен 200. Статус код равен {response.status_code}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
