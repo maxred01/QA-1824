@@ -16,5 +16,5 @@ def test_api_users():
 
     print(response.status_code)
 
-    check.equal(response.status_code, 202,
+    check.equal(response.status_code, 200,
                 f'статус код не равен 200. Статус код равен {response.status_code}')
