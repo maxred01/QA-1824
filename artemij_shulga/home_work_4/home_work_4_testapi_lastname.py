@@ -17,24 +17,3 @@ def test_api_users():
     print(jsondata['data']['last_name'])
 
     check.equal(jsondata['data']['last_name'], 'Weaver')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
