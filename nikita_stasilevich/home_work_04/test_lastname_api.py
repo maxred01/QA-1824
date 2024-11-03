@@ -11,8 +11,8 @@ def test_api_users():
 
     response = requests.request('GET', url, headers=headers)
 
-    find_json=response.json()
-    test_json_lastname=find_json['data']['last_name']
+    find_json=response.json() #запрашиваем библиотеку
+    test_json_lastname=find_json['data']['last_name'] #Присваеваем конкретные данные библиотеки в отдельную переменную
 
     print(response.status_code)
 
