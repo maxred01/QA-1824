@@ -40,4 +40,3 @@ def test_api_post_users():
     check.equal(data_respons['job'], job)
     check.greater(int(respons_id), 620)
     check.is_not_none(data_respons['createdAt'])
-
