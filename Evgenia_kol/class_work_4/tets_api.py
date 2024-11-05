@@ -3,7 +3,6 @@ import pytest_check as check
 import pytest
 
 
-
 def test_api_users():
     url = "https://reqres.in/api/users?page=2"
 
