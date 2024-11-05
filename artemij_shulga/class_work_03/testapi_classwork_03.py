@@ -46,7 +46,7 @@ def test_api_post_users():
 
 def test_api_post_one_users():
 
-    url = url = "https://reqres.in/api/users"
+    url = "https://reqres.in/api/users"
 
     headers = {}
 
