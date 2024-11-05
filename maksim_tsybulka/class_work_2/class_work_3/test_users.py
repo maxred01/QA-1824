@@ -19,13 +19,24 @@ def test_api_users():
 def test_api_post_users():
     url = "https://reqres.in/api/users"
 
-    headers = {}
+    name = "max"
+    job = "teacher"
+
     data = {
-        "name": "max",
-        "job": "teacher"
+        "name": name,
+        "job": job
     }
 
-    response = requests.request('POST', url, headers=headers, data=data)
 
-    (print(response.status_code))
-    (print(response.json()))
+    headers = {}
+
+    response = requests.request('POST', url, headers=headers, data=data)
+    data_respons = response.json()
+    respons_id = data_respons['id']
+
+    check.equal(response.status_code, 201)
+
+    check.equal(data_respons['name'], name)
+    check.equal(data_respons['job'], job)
+    check.greater(int(respons_id), 620)
+    check.is_not_none(data_respons['createdAt'])
