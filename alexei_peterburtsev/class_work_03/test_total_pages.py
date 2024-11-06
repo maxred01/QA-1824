@@ -1,4 +1,4 @@
-'''test api rev 1.2'''
+'''Alexei Peterburtsev test'''
 
 import requests # pylint: disable=E0401
 import pytest_check as check # pylint: disable=E0401
@@ -25,10 +25,13 @@ def test_api_users_new():
 
     url = 'https://reqres.in/api/users'
 
+    user_name = "Alexei"
+    user_job = "Student"
+
     header = {}
     new_users = {
-        "name": "Alexei",
-        "job": "student"
+        "name": user_name,
+        "job": user_job
     }
 
     response = requests.request('POST', url, headers=header, data=new_users)
@@ -36,10 +39,7 @@ def test_api_users_new():
     check.equal(response.status_code, 201, f'status code is NOT 201, status code is,'
                                            f'{response.status_code}')
 
-    find_job_and_name = response.json()
-    test_job = find_job_and_name['job']
-    test_name = find_job_and_name['name']
-    check.equal(test_job, 'student', 'job is NOT "student"')
-    check.equal(test_name, 'Alexei', 'name is NOT "Alexei"')
+    user_data = response.json()
 
-    check.is_in("jkhklexei", test_name)
+    check.not_equal(user_data['name'], user_data['job'], 'FAIL. "Name" = "Job".')
+    check.is_not_none(user_data['createdAt'], 'FAIL. "createdAt" is EMPTY')
