@@ -1,0 +1,7 @@
+/venv/
+/.idea/
+/.github/
+misc.xml
+QA-1824.iml
+.DS_Store
+.pytest_cache
