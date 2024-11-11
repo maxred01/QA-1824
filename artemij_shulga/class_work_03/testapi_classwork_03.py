@@ -67,7 +67,8 @@ def test_api_post_one_users():
     print(test_job['job'])
     print(response.status_code)
 
-    check.equal(test_name['name'], "artemij", f'Имя не равен "artemij". Имя равен artemij {test_name["name"]}')
+    check.equal(test_name['name'], "artemij",
+                f'Имя не равен "artemij". Имя равен artemij {test_name["name"]}')
     check.equal(test_job['job'], "prime leader",
                 f'Рабона не равна "prime leader". Имя равна prime leader {test_job["job"]}')
     check.equal(response.status_code, 201,
