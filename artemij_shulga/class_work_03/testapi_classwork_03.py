@@ -27,6 +27,7 @@ def test_api_users():
 
 
 def test_api_post_users():
+    """ testing """
 
     url = "https://reqres.in/api/users"
 
@@ -45,6 +46,7 @@ def test_api_post_users():
 
 
 def test_api_post_one_users():
+    """ testing """
 
     url = "https://reqres.in/api/users"
 
@@ -62,11 +64,12 @@ def test_api_post_one_users():
     test_job = response.json()
 
     print(test_name['name'])
-    print(test_name['job'])
+    print(test_job['job'])
     print(response.status_code)
 
-    check.equal(test_name['name'], "artemij", f'Имя не равен "artemij". Имя равен artemij {test_name["name"]}')
+    check.equal(test_name['name'], "artemij",
+                f'Имя не равен "artemij". Имя равен artemij {test_name["name"]}')
     check.equal(test_job['job'], "prime leader",
-                f'Рабона не равна "prime leader". Имя равна prime leader {test_name["job"]}')
+                f'Рабона не равна "prime leader". Имя равна prime leader {test_job["job"]}')
     check.equal(response.status_code, 201,
                 f'статус код не равен 200. Статус код равен {response.status_code}')
