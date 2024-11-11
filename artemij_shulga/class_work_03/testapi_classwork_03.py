@@ -6,7 +6,7 @@ import pytest_check as check  # pylint: disable=E0401
 
 
 def test_api_users():
-    """ testing """
+    """ testing  """
 
     url = "https://reqres.in/api/unknown"
 
