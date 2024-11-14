@@ -24,4 +24,3 @@ def test_url(url):
 
     with allure.step(f"Проверка сайта {url} на статус код"):
         check.equal(response.status_code, 200)
-
