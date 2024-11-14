@@ -27,3 +27,4 @@ def test_url(url):
 
   with allure.step(f"Test site {url} on status code"):
     check.equal(respons.status_code, 200)
+
