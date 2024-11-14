@@ -26,4 +26,4 @@ def test_url(url):
     respons = requests.get(f"https://people.onliner.by/{url}")
 
     with allure.step(f"Test site {url} ON test status code"):
-      check.equal(respons.status_code, 200)
+        check.equal(respons.status_code, 200)
