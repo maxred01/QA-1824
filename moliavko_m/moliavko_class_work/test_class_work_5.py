@@ -3,6 +3,7 @@ import pytest
 import allure
 import pytest_check as check
 
+
 @allure.title('Апи тесты')
 @allure.feature('Проверка апи главно_й страницы')
 @allure.description("Тут мы проверяем, что главная страницы доступна и отдает статус код 200")

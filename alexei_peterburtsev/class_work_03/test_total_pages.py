@@ -1,7 +1,7 @@
 '''Alexei Peterburtsev test'''
+import requests  # pylint: disable=E0401
+import pytest_check as check  # pylint: disable=E0401
 
-import requests # pylint: disable=E0401
-import pytest_check as check # pylint: disable=E0401
 
 def test_api_users():
     '''func test total_pages'''
@@ -9,7 +9,7 @@ def test_api_users():
 
     header = {}
 
-    response = requests.request('GET', url, headers = header)
+    response = requests.request('GET', url, headers=header)
     find_total_pages = response.json()
 
     test_total_pages = find_total_pages['total_pages']
@@ -17,8 +17,9 @@ def test_api_users():
     check.equal(response.status_code, 200, f'status code is NOT 200, status code is,'
                                            f'{response.status_code}')
 
-    check.equal(test_total_pages, 2,  f'total_pages is NOT 2, total_pages is,'
-                                           f'{test_total_pages}')
+    check.equal(test_total_pages, 2, f'total_pages is NOT 2, total_pages is,'
+                                     f'{test_total_pages}')
+
 
 def test_api_users_new():
     '''func test new_user'''

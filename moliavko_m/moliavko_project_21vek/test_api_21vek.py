@@ -3,6 +3,7 @@ import requests
 import pytest_check as check
 import allure
 
+
 @allure.title('Апи тест')
 @allure.feature('проверка апи кнопки "все акции" ')
 @allure.description("проверяем, что кнопка работает, отдает статус код 200,"
@@ -19,7 +20,6 @@ import allure
                                  "https://www.21vek.by/special_offers/promo.html",
                                  "https://www.21vek.by/special_offers/promo.html",
                                  ])
-
 def test_api_button(url):
     response = requests.get(f'{url}')
 

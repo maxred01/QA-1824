@@ -1,7 +1,7 @@
 '''test api rev 1.1'''
-
 import requests # pylint: disable=E0401
 import pytest_check as check # pylint: disable=E0401
+
 
 def test_api_users():
     '''func test last_name'''

@@ -1,6 +1,4 @@
 ''' test api - status_code/total_pages '''
-
-
 import requests  # pylint: disable=E0401
 import pytest_check as check  # pylint: disable=E0401
 
@@ -34,15 +32,14 @@ def test_api_post_users():
     headers = {}
 
     info = {
-    "name": "artemij",
-    "job": "prime leader"
+        "name": "artemij",
+        "job": "prime leader"
     }
 
     response = requests.request('POST', url, headers=headers, data=info)
 
     print(response.status_code)
     print(response.json())
-
 
 
 def test_api_post_one_users():
@@ -53,8 +50,8 @@ def test_api_post_one_users():
     headers = {}
 
     info = {
-    "name": "artemij",
-    "job": "prime leader"
+        "name": "artemij",
+        "job": "prime leader"
     }
 
     response = requests.request('POST', url, headers=headers, data=info)

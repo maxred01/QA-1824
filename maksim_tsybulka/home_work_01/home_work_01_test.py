@@ -1,6 +1,7 @@
 """Мой импорт"""
 import requests  # pylint: disable=E0401
 
+
 URL = "https://hoster.by/ajax/basket.php"
 
 PAYLAUD = "mode=CLOUD_HOSTING&name=24CPU%2C+RAM%3A+64%D0%93%D0%B1%2C+SSD%3A+" \

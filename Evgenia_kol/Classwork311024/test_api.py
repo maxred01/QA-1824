@@ -1,5 +1,4 @@
 import requests
-import pytest
 import pytest_check as check
 
 
@@ -10,4 +9,4 @@ def test_api_users():
 
     response = requests.request('GET', url, headers=headers)
 
-    check.equal (response.status_code , 200, 'статус код равен 200')
+    check.equal(response.status_code, 200, 'статус код равен 200')

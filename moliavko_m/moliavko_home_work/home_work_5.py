@@ -1,6 +1,7 @@
 import pytest_check as check
 import requests
 
+
 def test_api_register_successful():
     url = "https://reqres.in/api/register"
 
@@ -14,8 +15,8 @@ def test_api_register_successful():
     password = "1234561111"
 
     data = {
-         "id": id,
-       "name": name,
+        "id": id,
+        "name": name,
         "year": year,
         "color": color,
         "pantone_value": pantone_value,

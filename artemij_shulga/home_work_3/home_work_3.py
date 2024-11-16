@@ -1,5 +1,4 @@
 ''' first homework '''
-
 from selenium import webdriver  # pylint: disable=E0401
 
 driver = webdriver.Chrome()

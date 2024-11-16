@@ -1,6 +1,5 @@
 import requests
 import pytest_check as check
-import pytest
 import allure
 
 

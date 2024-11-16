@@ -1,6 +1,7 @@
 import requests
 import pytest_check as check
 
+
 def test_api_users():
 
     url = "https://reqres.in/api/user/2"

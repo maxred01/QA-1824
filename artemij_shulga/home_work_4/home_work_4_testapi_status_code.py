@@ -1,6 +1,4 @@
 ''' test api - status_code'''
-
-
 import requests  # pylint: disable=E0401
 import pytest_check as check  # pylint: disable=E0401
 

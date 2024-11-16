@@ -1,6 +1,5 @@
 import requests
 import pytest_check as check
-import pytest
 
 
 def test_api_users():
@@ -21,15 +20,16 @@ def test_api_users():
     check.equal(response.status_code, 202, f'статус код не равен 200. Статус код равен {response.status_code}')
     print(response)
 
+
 def test_api_post_users():
     url = "https://reqres.in/api/users"
 
     headers = {}
     data = {
-    "job": "tester"
-}
+        "job": "tester"
+    }
 
     response = requests.request('POST', url, headers=headers, data=data)
     data = response.json()
 
-    check.equal(data['data']['job'], 'tester',f'Job не равна "tester"')
+    check.equal(data['data']['job'], 'tester', f'Job не равна "tester"')

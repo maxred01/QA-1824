@@ -1,6 +1,6 @@
 import requests
-
 import pytest_check as check
+
 
 def test_api_users():
 
@@ -28,4 +28,3 @@ def test_api_post_users():
     assert 'job' in data, "Напиши нет 'job'"
     assert 'id' in data, "Напиши нет 'id'"
     check.equal(response.status_code, 201, f'статус код не равен 201. Статус код равен {response.status_code}')
-

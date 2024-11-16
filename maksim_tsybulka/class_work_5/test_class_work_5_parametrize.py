@@ -20,21 +20,11 @@ import pytest_check as check
                                  "5",
                                  ])
 def test_url(url):
-  respons = requests.get(f'https://hoster.by/{url}')
+    respons = requests.get(f'https://hoster.by/{url}')
 
-  with allure.step(f'Проверка сайта {url} на статус код'):
-    check.equal(respons.status_code, 200)
+    with allure.step(f'Проверка сайта {url} на статус код'):
+        check.equal(respons.status_code, 200)
 
-
-
-
-
-
-
-
-
-#
-#
 # @allure.title('Апи тесты второй вариант')
 # @allure.feature('Проверка апи главной страницы второй вариант')
 # @allure.description("Тут мы проверяем, что главная страницы доступна и отдает статус код 200 второй вариант")

@@ -2,6 +2,7 @@ import requests
 import pytest
 import pytest_check as check
 
+
 def test_api_users():
     url = 'https://reqres.in/api/users?page=2`'
     headers = {}
