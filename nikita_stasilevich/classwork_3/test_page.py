@@ -1,6 +1,6 @@
 """test total pages"""
-import requests  # pylint: disable=E0401
-import pytest_check as check  # pylint: disable=E0401
+import requests
+import pytest_check as check
 
 
 def test_api_users():
@@ -41,5 +41,3 @@ def test_api_post_users():
     check.equal(response.status_code, 201, f'стастус код не равен 201. Статус код равен {response.status_code}')
 
     check.equal(test_json_name, "Nikita", "total pages is not Nikita")
-
-

@@ -30,16 +30,14 @@ def test_api_post_users():
 def test_api_post_users1():
     url = 'https://reqres.in/api/users'
 
-    headers = {}
-
     data = {
         "name": "morpheus",
         "job": "leader"
     }
 
-    response = requests.request('POST', url, headers={}, data={})
+    response = requests.request('POST', url, data=data)
 
-    check.equal(data['name']['job'], ['name']['job'], f'значение name job не равно morpheus leader, а равно = {(data[data])}')
+    respons_data = response.json()
 
-    (print(response.status_code))
-    (print(response.json))
+    check.equal(respons_data['name'], data['name'], 'Имя не равено morpheus')
+    check.equal(respons_data['job'], data['job'], 'Работа не равена leader')

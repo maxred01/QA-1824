@@ -32,4 +32,4 @@ def test_api_post_users():
     response = requests.request('POST', url, headers=headers, data=data)
     data = response.json()
 
-    check.equal(data['data']['job'], 'tester', f'Job не равна "tester"')
+    check.equal(data['data']['job'], 'tester', 'Job не равна "tester"')
