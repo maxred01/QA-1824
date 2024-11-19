@@ -12,14 +12,14 @@ import pytest_check as check
 @allure.link("https://hoster.by/", name="Website")
 @allure.issue("AUTH-123")
 @allure.testcase("TMS-456")
-@pytest.mark.parametrize("status_code, name", [
-    (200, "testekor"),
-    (230, "hello world"),
-    (200, ";%%№"),
-    (200, "test"),
-    (200, "кураqwery"),
+@pytest.mark.parametrize("name", [
+    "testekor",
+    "hello world",
+    ";%%№",
+    "test",
+    "кураqwery",
 ])
-def test_parametrize(status_code, name):
+def test_parametrize(name):
 
     url = "https://hoster.by/ajax/ajax.php"
 
@@ -67,6 +67,3 @@ def test_parametrize(status_code, name):
 
     with allure.step(f"Проверка поля name с символами {name}"):
         check.equal(response_one.status_code, 200)
-
-    with allure.step(f"Проверка на статус код {status_code}"):
-        assert status_code == 200
