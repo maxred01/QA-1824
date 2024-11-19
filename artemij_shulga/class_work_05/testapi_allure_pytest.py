@@ -3,7 +3,6 @@ import pytest
 import allure
 import pytest_check as check
 
-
 @allure.title("API tests")
 @allure.feature("Test search")
 @allure.description("check: hoster status and name")
@@ -19,7 +18,6 @@ import pytest_check as check
     (200, ";%%№"),
     (200, "test"),
     (200, "кураqwery"),
-
 ])
 def test_parametrize(status_code, name):
 
