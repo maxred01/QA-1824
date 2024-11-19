@@ -1,7 +1,9 @@
-import requests
-import allure
-import pytest
-import pytest_check as check
+'''Peterburtsev'''
+
+import requests # pylint: disable=E0401
+import allure # pylint: disable=E0401
+import pytest # pylint: disable=E0401
+import pytest_check as check # pylint: disable=E0401
 
 @allure.feature("Api tests")
 @allure.description("Test")
@@ -23,6 +25,7 @@ import pytest_check as check
                                  ]
                          )
 def test_url(url):
+    '''func url'''
     respons = requests.get(f"https://people.onliner.by/{url}")
 
     with allure.step(f"Test site {url} TESTSITE status code"):
