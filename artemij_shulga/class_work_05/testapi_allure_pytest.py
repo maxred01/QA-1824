@@ -67,3 +67,4 @@ def test_parametrize(name):
 
     with allure.step(f"Проверка поля name с символами {name}"):
         check.equal(response_one.status_code, 200)
+
