@@ -1,5 +1,6 @@
 ''' test webdriver '''
-from selenium import webdriver # pylint: disable=E0401
+from selenium import webdriver
+
 
 driver = webdriver.Chrome()
 driver.get("https://hoster.by")
