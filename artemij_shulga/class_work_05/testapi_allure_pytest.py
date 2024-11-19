@@ -9,7 +9,7 @@ import pytest_check as check
 @allure.description("check: hoster status and name")
 @allure.tag("API", "Positive")
 @allure.severity(allure.severity_level.CRITICAL)
-@allure.label("QA", "Artemij Shulga")
+@allure.label("QA Auto", "Artemij Shulga")
 @allure.link("https://hoster.by/", name="Website")
 @allure.issue("AUTH-123")
 @allure.testcase("TMS-456")
