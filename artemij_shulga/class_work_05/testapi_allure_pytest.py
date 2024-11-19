@@ -70,8 +70,3 @@ def test_parametrize(status_code, name):
 
     with allure.step(f"Проверка на статус код {status_code}"):
         assert status_code == 200
-
-
-
-
-
