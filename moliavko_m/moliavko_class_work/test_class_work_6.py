@@ -1,8 +1,9 @@
-from selenium import webdriver
 import allure
-import pytest_check as check
-from selenium.webdriver.common.by import By
 import requests
+import pytest_check as check
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 @allure.story('проверка сайта QA Tools')
 @allure.feature('проверка заполнения формы')
