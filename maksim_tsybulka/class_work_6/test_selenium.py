@@ -1,15 +1,17 @@
-from selenium import webdriver
-import pytest
-import allure
+""""Импорирование библиотек """
 import time
+import allure
 import pytest_check as check
+
+from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 
 @allure.story('Проверка сайта')
 @allure.feature('Проверка заполнения формы')
 def test_text_box():
+    """Тест проверки работоспособности формы"""
+
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.get("https://demoqa.com/text-box")
