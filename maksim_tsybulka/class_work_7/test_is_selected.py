@@ -16,12 +16,14 @@ def test_checkbox():
     driver.maximize_window()
     driver.get("https://demoqa.com/checkbox")
 
-    check_box_home_click = driver.find_element(By.XPATH, '(//span[@class="rct-checkbox"])[1]')
-    check_box_home = driver.find_element(By.XPATH, '//input[@id="tree-node-home"]')
+    driver.find_element(By.XPATH, '//button[@class="rct-collapse rct-collapse-btn"]').click()
+    driver.find_element(By.XPATH, '(//button[@class="rct-collapse rct-collapse-btn"])[2]').click()
+    driver.find_element(By.XPATH, '//label[@for="tree-node-notes"]').click()
+    len_elements = driver.find_elements(By.XPATH, '//input[@type="checkbox"]')
 
-    check_box_home_click.click()
     time.sleep(2)
-    check.is_true(check_box_home.is_selected())
+    check.is_true(driver.find_element(By.XPATH, '//input[@id="tree-node-notes"]').is_selected())
+    check.equal(len(len_elements), 10)
 
     driver.close()
     driver.quit()
