@@ -37,7 +37,16 @@ def test_text_box():
     with allure.step('Првоерка, что форма успешно заполнена'):
         check.is_true(driver.find_element(By.ID, 'output').is_displayed(), 'Формы не создана')
 
-        time.sleep(5)
+    with allure.step('Првоерка, что текст в ответе формы совпадает с веденным'):
+        elements_form = [
+            (driver.find_element(By.XPATH, '//p[@id="name"]').text, 'Мой первый текст'),
+            (driver.find_element(By.XPATH, '//p[@id="email"]').text, 'test@test.com'),
+            (driver.find_element(By.XPATH, '//p[@id="currentAddress"]').text, 'Мой первый текст'),
+            (driver.find_element(By.XPATH, '//p[@id="permanentAddress"]').text, 'Мой первый текст')
+        ]
+
+        for elements, elements_text in elements_form:
+            check.greater(elements.find(elements_text), -1)
 
     driver.close()
     driver.quit()
