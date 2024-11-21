@@ -1,15 +1,13 @@
-from selenium import webdriver
-import pytest
-import allure
 import time
+from selenium import webdriver
+import allure
 import pytest_check as check
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 @allure.story('Проверка сайта')
 @allure.feature('Проверка заполнения формы')
 def test_test_box():
-    driver = webdriver.Chrome()
+    driver = selenium.webdriver.Chrome()
     driver.set_window_size(1920,1080)
     driver.get("https://demoqa.com/text-box")
 
@@ -32,7 +30,7 @@ def test_test_box():
         input_pa = driver.find_element(By.ID, 'permanentAddress')
         input_pa.send_keys('pushkina-kolotushkina')
 
-    with allure.step('Проверка кнопки'f'submit'):
+    with allure.step('Проверка кнопки'f'{submit}'):
         output_data = driver.find_element(By.ID, 'submit')
         output_data = output_data.click()
 
