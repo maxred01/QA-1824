@@ -56,9 +56,9 @@ def test_text_box():
 
     name_user = driver.find_element(By.XPATH, '//*[@id="name"]').text
     email_user = driver.find_element(By.XPATH, '//*[@id="email"]').text
-    currect_user = driver.find_element(By.XPATH, '//*[@id="currentAddress"]').text
+    adress_user = driver.find_element(By.XPATH, '//*[@id="currentAddress"]').text
     permanent_user = driver.find_element(By.XPATH, '//*[@id="permanentAddress"]').text
-    print(name_user, email_user, currect_user, permanent_user)
+    print(name_user, email_user, adress_user, permanent_user)
 
     time.sleep(5)
     driver.close()
