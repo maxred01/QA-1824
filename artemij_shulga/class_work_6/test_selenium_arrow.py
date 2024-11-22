@@ -1,18 +1,15 @@
 ''' Test checkbox '''
+
 from selenium import webdriver
-import pytest
 import allure
 import time
 import pytest_check as check
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-
-
 
 @allure.story('Test checkbox')
 @allure.feature('Check button')
 def test_text_box():
-    """ testing checkbox"""
+    """ Testing checkbox"""
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.get("https://demoqa.com/checkbox")
