@@ -37,13 +37,3 @@ def test_accordion():
     time.sleep(2)
     driver.close()
     driver.quit()
-
-
-
-
-
-
-
-
-
-
