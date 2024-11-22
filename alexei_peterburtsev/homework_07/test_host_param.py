@@ -22,5 +22,5 @@ def test_url(url):
     '''test func'''
     respons = requests.get(f'https://www.hoster.by/{url}')
 
-    with allure.step(f'Test site {url} ON status code'):
+    with allure.step(f'Test site {url} ONN status code'):
         check.equal(respons.status_code, 200)
