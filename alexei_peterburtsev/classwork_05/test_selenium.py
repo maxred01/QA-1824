@@ -1,11 +1,11 @@
 '''Alexei Peterburtsev'''
-from selenium import webdriver
-import pytest
-import allure
+
 import time
+import allure
 import pytest_check as check
+from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+
 
 @allure.story('Validation Site')
 @allure.feature('Validation input fields')
