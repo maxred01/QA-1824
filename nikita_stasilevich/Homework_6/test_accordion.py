@@ -10,21 +10,15 @@ def test_accordion():
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.get("https://demoqa.com/accordian")
-
     time.sleep(1)
-
     driver.execute_script('window.scrollBy(0, 300);')
-
     time.sleep(2)
-
     widgets_click_one = driver.find_element(By.ID, 'section1Heading')
     widgets_click_one_text = driver.find_element(By.ID, 'section1Content')
     check.is_true(widgets_click_one_text.is_displayed(), 'No text')
     widgets_click_one.click()
-
     driver.execute_script('window.scrollBy(0, 150);')
     time.sleep(2)
-
     widgets_click_two = driver.find_element(By.ID, 'section2Heading')
     widgets_click_two_text = driver.find_element(By.ID, 'section2Content')
     widgets_click_two.click()
@@ -32,10 +26,8 @@ def test_accordion():
     time.sleep(1)
     widgets_click_two.click()
     time.sleep(2)
-
     driver.execute_script('window.scrollBy(0, 150);')
     time.sleep(2)
-
     widgets_click_three = driver.find_element(By.ID, 'section3Heading')
     widgets_click_three.click()
     time.sleep(2)
@@ -43,9 +35,9 @@ def test_accordion():
     check.is_true(widgets_click_three_text.is_displayed(), 'No text')
     widgets_click_three.click()
     time.sleep(2)
-
     driver.close()
     driver.quit()
+
 
 
 
