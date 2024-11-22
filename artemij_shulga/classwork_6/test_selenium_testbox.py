@@ -1,6 +1,6 @@
+import time
 from selenium import webdriver
 import allure
-import time
 import pytest_check as check
 from selenium.webdriver.common.by import By
 
