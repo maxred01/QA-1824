@@ -13,7 +13,9 @@ def test_checkbox():
     check_box_home_click = driver.find_element(By.XPATH, '//*[@id="tree-node"]/ol/li/span/button')
     check_box_home_click.click()
     time.sleep(2)
-    check_box_desktop_click = driver.find_element(By.XPATH, '//*[@id="tree-node"]/ol/li/ol/li[1]''/span/button')
+    check_box_desktop_click = driver.find_element(By.XPATH, "//*[@id=\"tree-node\"]"
+                                                            '/ ol / li / ol / li[1]''/span/button')
+
     check_box_desktop_click.click()
     time.sleep(2)
     check_box_notes = driver.find_element(By.XPATH, '//*[@id="tree-node"]/ol/li/ol/li[1]/ol/li[1]'
