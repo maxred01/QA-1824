@@ -47,4 +47,3 @@ def test_accordion():
 
 
 
-
