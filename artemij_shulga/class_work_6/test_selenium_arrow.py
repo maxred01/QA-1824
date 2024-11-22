@@ -6,6 +6,7 @@ import time
 import pytest_check as check
 from selenium.webdriver.common.by import By
 
+
 @allure.story('Test checkbox')
 @allure.feature('Check button')
 def test_text_box():

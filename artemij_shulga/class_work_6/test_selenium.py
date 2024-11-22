@@ -6,6 +6,7 @@ import time
 import pytest_check as check
 from selenium.webdriver.common.by import By
 
+
 @allure.story('Site check')
 @allure.feature('Checking the completion of the form')
 def test_text_box():
@@ -64,4 +65,3 @@ def test_text_box():
     time.sleep(5)
     driver.close()
     driver.quit()
-
