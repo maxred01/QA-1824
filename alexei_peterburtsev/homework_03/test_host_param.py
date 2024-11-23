@@ -12,7 +12,7 @@ import pytest_check as check
 @allure.issue('AUTH-123')
 @allure.testcase('TMS-456')
 @pytest.mark.parametrize('email', [
-                                'alex-8111@list.ru',
+                                'alex-811@list.ru',
                                 '111@@'
                                  ]
                          )
