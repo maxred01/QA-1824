@@ -73,5 +73,5 @@ def test_url(email):
 
     response = requests.request("POST", url, headers=headers, data=payload)
 
-    with allure.step(f'Test Email {email}'):
+    with allure.step(f'Test Email: {email}'):
         check.equal(response.status_code, 201)
