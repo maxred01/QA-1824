@@ -16,7 +16,7 @@ import pytest_check as check
                                 '<tag>',
                                  ]
                          )
-def test_url(email):
+def test_parametrize(email):
 
     url = "https://hoster.by/ajax/ajax.php"
 
