@@ -92,6 +92,6 @@ def test_accordian():
             '//*[@id="accordianContainer"]/div/div[3]/div[2]').is_displayed(),
                        '3-й аккордион не закрылся')
 
-    time.sleep(2)
+    time.sleep(3)
     driver.close()
     driver.quit()
