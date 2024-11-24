@@ -2,8 +2,6 @@ import requests
 import pytest
 import allure
 import pytest_check as check
-
-
 @allure.title('Проверка параметрайз')
 @allure.feature('Проверка апи страницы "Помощь"')
 @allure.description("Тут мы проверяем замену номера телефона на странице 'Помощь'")
@@ -15,13 +13,8 @@ import pytest_check as check
 @allure.testcase("TMS-456")
 @pytest.mark.parametrize('phone', [
                                 '375296961079'])
-
-
-
 def test_parametrize(phone):
-
     url = "https://hoster.by/ajax/ajax.php"
-
     payload = ('action=sendAjax&phone=%2B375%20(29)%20697-10-77&form_name=%D0%9E%D1%81%D1%82%D0%B0%D0%BB%D0%B8%D1%81%D1'
                '%8C%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%3F&email=stasilevichnik1996%40gmail.com&name=%D0%9D%D0'
                '%B8%D0%BA%D0%B8%D1%82%D0%B0&message=test&email'
@@ -63,9 +56,6 @@ def test_parametrize(phone):
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/131.0.0.0 Safari/537.36'
     }
-
     response = requests.request("POST", url, headers=headers, data=payload)
-
-
     with allure.step(f'Test Phone: {phone}'):
         check.equal(response.status_code, 200)
