@@ -66,8 +66,6 @@ def test_parametrize(phone):
 
     response = requests.request("POST", url, headers=headers, data=payload)
 
-    print(response.text)
-
 
     with allure.step(f'Test Phone: {phone}'):
         check.equal(response.status_code, 200)
