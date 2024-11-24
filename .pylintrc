@@ -18,7 +18,7 @@ disable=
     E0102,
     W0702
 
-ignore=conftest.py
+ignore=conftest.py,/maksim_tsybulka/example_diplom/page/elements.py
 
 [FORMAT]
 max-line-length=130
