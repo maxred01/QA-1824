@@ -16,7 +16,7 @@ disable=
     F0001,
     C0304
 
-ignore=Maksim_Tsybulka/example_ui/*.py
+ignore=conftest.py
 
 [FORMAT]
 max-line-length=120
