@@ -14,12 +14,11 @@ disable=
     W0613,
     R1732,
     F0001,
-    C0304
+    C0304,
+    E0102,
+    W0702
 
 ignore=conftest.py
-ignore=/maksim_tsybulka/example_diplom/page/base_page.py
-ignore=/maksim_tsybulka/example_diplom/page/elements.py
-ignore=/maksim_tsybulka/example_diplom/tests/test_main_page.py
 
 [FORMAT]
 max-line-length=130
