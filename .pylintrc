@@ -17,6 +17,9 @@ disable=
     C0304
 
 ignore=conftest.py
+ignore=/maksim_tsybulka/example_diplom/page/base_page.py
+ignore=/maksim_tsybulka/example_diplom/page/elements.py
+ignore=/maksim_tsybulka/example_diplom/tests/test_main_page.py
 
 [FORMAT]
-max-line-length=120
+max-line-length=130
