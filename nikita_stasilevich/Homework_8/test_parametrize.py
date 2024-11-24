@@ -14,9 +14,7 @@ import pytest_check as check
 @pytest.mark.parametrize('phone', [
                                 '+375296777611'])
 def test_parametrize(phone):
-
     url = "https://hoster.by/ajax/ajax.php"
-
     payload = ('action=sendAjax&phone=%2B375296971077&form_name=%D0%9E%D1%81%D1%82%D0%B0%D0%BB%D0%B8%D1%81%D1%8C%20%D0%'
                'B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%3F&email=stasilevichnik1996%40gmail.com&name=%D0%9D%D0%B8%D0%BA%'
                'D0%B8%D1%82%D0%B0&message=test&'
