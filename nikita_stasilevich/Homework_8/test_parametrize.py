@@ -14,7 +14,7 @@ import pytest_check as check
 @allure.issue("AUTH-123")
 @allure.testcase("TMS-456")
 @pytest.mark.parametrize('phone', [
-                                '+375296777611'])
+                                '375291808017'])
 
 
 
