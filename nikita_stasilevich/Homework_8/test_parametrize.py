@@ -10,7 +10,7 @@ import pytest_check as check
 @allure.tag("API", "Positive")
 @allure.severity(allure.severity_level.CRITICAL)
 @allure.label("owner", "Nikita Stasilevich")
-@allure.link("https://hoster.by/ajax/ajax.php", name="Website")
+@allure.link("https://hoster.by/", name="Website")
 @allure.issue("AUTH-123")
 @allure.testcase("TMS-456")
 @pytest.mark.parametrize('phone', [
