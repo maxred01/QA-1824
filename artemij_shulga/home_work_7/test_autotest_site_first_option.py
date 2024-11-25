@@ -8,7 +8,7 @@ import requests
 @allure.title("Autotests")
 @allure.feature("test ssl certificate and status code")
 @allure.description("check:ssl certificate and status code 200")
-@allure.tag("Autotest", "Positive")
+@allure.tag("Autotests", "Positive")
 @allure.label("QA", "Artemij Shulga")
 @allure.link("https://www.nasa.gov/", name="Website")
 
