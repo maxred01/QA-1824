@@ -33,3 +33,4 @@ def test_status_code_nasa():
     with allure.step("nasa status check code"):
         check.equal(response.status_code, 200,
                     f'status code is not equal to 200.Status code is {response.status_code}')
+
