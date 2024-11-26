@@ -5,10 +5,10 @@ import pytest_check as check
 import requests
 
 
-@allure.title("Autotests")
+@allure.title("Autotest")
 @allure.feature("test ssl certificate and status code")
 @allure.description("check:ssl certificate and status code 200")
-@allure.tag("Autotests", "Positive")
+@allure.tag("Autotest", "Positive")
 @allure.label("QA", "Artemij Shulga")
 @allure.link("https://www.nasa.gov/", name="Website")
 
