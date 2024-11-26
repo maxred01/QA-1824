@@ -22,6 +22,7 @@ def test_ssl_certificate_exists():
             assert certificate is not None, "SSL certificate does not exist."
 
 
+
 def test_status_code_nasa():
 
     url = 'https://www.nasa.gov/'
