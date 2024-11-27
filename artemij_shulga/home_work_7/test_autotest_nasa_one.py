@@ -1,0 +1,36 @@
+import ssl
+import socket
+import allure
+import pytest_check as check
+import requests
+
+
+@allure.title("Autotests")
+@allure.feature("test ssl certificate and status code")
+@allure.description("check:ssl certificate passed and status code 200")
+@allure.tag("Autotests", "Positive")
+@allure.label("QA", "Artemij Shulga")
+@allure.link("https://www.nasa.gov/", name="Website")
+
+
+def test_ssl_certificate_exists():
+    """ testing ssl certificate """
+    domain = 'www.nasa.gov'
+    context = ssl.create_default_context()
+    with socket.create_connection((domain, 443)) as sock:
+        with context.wrap_socket(sock, server_hostname=domain) as ssock:
+            certificate = ssock.getpeercert()
+            assert certificate is not None, "SSL certificate does not exist."
+
+
+def test_status_code_nasa():
+    """ testing status code """
+    url = 'https://www.nasa.gov/'
+
+    headers = {}
+
+    response = requests.request('GET', url, headers=headers)
+
+    with allure.step("nasa status check code"):
+        check.equal(response.status_code, 200,
+                    f'status code is not equal to 200.Status code is {response.status_code}')
