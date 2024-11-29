@@ -43,16 +43,16 @@ def test_text_box():
         check.is_true(input_background.is_displayed(), 'user successfully registered')
 
     with allure.step("check field name"):
-        check.is_true(driver.find_element(By.ID, 'name'), 'name no register')
+        check.is_true(driver.find_element(By.ID, 'name').is_displayed(), 'name no register')
 
     with allure.step("check field email"):
-        check.is_true(driver.find_element(By.ID, 'email'), 'email no register')
+        check.is_true(driver.find_element(By.ID, 'email').is_displayed(), 'email no register')
 
     with allure.step("check field currentAddress"):
-        check.is_true(driver.find_element(By.ID, 'currentAddress'), 'currentAddress no register')
+        check.is_true(driver.find_element(By.ID, 'currentAddress').is_displayed(), 'currentAddress no register')
 
     with allure.step("check field permanentAddress"):
-        check.is_true(driver.find_element(By.ID, 'permanentAddress'), 'permanentAddress no register')
+        check.is_true(driver.find_element(By.ID, 'permanentAddress').is_displayed(), 'permanentAddress no register')
 
     name_user = driver.find_element(By.XPATH, '//*[@id="name"]').text
     email_user = driver.find_element(By.XPATH, '//*[@id="email"]').text
