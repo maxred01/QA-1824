@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+	background: #4f4c4d;
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
+}
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 0px 0;
+	background-color: #01043e;
+}
+
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+	}
+
+nav ul li {
+	display:inline-block;
+	background-color: #01043e;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;
+	color:#FFF;
+	font-size:14px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover {
+	background-color: #ec1844;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:190px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	left:190px;
+}
+
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' >'; }
+li > a:only-child:after { content: ''; }
+</style>
+</head>
+<body>
+<div class="logo">
+  <img src="https://hoster.by/local/components/hoster/headerMenu/templates/.default/images/hoster-logo-main.svg" alt="hoster.by logo">
+</div>
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="#">Первый уровень</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="#">Второй уровень</a>
+                    <ul>
+                        <li><a href="/run_ui">Запуск всех тестов</a></li>
+                        <li><a href="/error">Вывод ошибки</a></li>
+                        <li><a href="/error">Вывод ошибки</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            </li>
+            <li><a href="/runallure">Формирование отчета Allure</a></li>
+        </ul>
+    </nav>
+  <h1>ИНСТРУКЦИИ</h1>
+<p>Тут мы описываем своей тест</p>
+</div>
+</body>
+</html>
